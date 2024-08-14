@@ -23,7 +23,7 @@ public class SimpleCanalClientTest extends AbstractCanalClientTest {
         String destination = "example";
         String ip = AddressUtils.getHostIp();
         CanalConnector connector = CanalConnectors
-            .newSingleConnector(new InetSocketAddress(ip, 11111), destination, "canal", "canal");
+            .newSingleConnector(new InetSocketAddress("127.0.0.1", 11111), destination, "canal", "canal");
 
         final SimpleCanalClientTest clientTest = new SimpleCanalClientTest(destination);
         clientTest.setConnector(connector);
